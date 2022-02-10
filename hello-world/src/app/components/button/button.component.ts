@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+// import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-button',
@@ -6,15 +7,17 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent implements OnInit {
-  @Input() text: string;
-  @Input() color: string;
+  @Input() text!: string;
+  @Input() color!: string;
+  @Output() buttonClick = new EventEmitter();
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   onClick() {
-    alert('Clicked');
+    // We want this method to be reusable
+    this.buttonClick.emit();
   }
 
 }

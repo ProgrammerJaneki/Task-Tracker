@@ -22,7 +22,8 @@ body {
 }
 .btn {
   display: inline-block;
-  background: #000;
+  background: #6122a3;
+  /* background: #000; */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -74,4 +75,11 @@ body {
 .form-control-check input {
   flex: 2;
   height: 20px;
+}
+
+.task-container {
+  /* display: flex; */
+  border: 1px solid steelblue;
+  padding: 8px;
+  margin-bottom: 10px;
 }
